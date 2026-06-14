@@ -1,0 +1,8 @@
+﻿node_modules/
+.npm-cache/
+_uploads/
+assets/videos/
+*_fix*.js
+test*.js
+.DS_Store
+Thumbs.db

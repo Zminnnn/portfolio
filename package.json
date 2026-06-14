@@ -1,0 +1,14 @@
+{
+  "name": "game-portfolio",
+  "version": "1.0.0",
+  "description": "游戏作品集网站",
+  "scripts": {
+    "admin": "node admin-server.js",
+    "start": "node admin-server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "multer": "^1.4.5-lts.1",
+    "adm-zip": "^0.5.16"
+  }
+}

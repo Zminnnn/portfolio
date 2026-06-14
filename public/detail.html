@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品详情</title>
+  <script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-brand">🎮 作品集</a>
+      <ul class="navbar-links" id="navLinks"></ul>
+    </div>
+  </nav>
+
+  <!-- Detail Content -->
+  <div class="detail-container">
+    <a href="/" class="detail-back">← 返回首页</a>
+    <div class="detail-header">
+      <h1 id="detailTitle"></h1>
+      <div class="tags" id="detailTags"></div>
+      <p class="detail-description" id="detailDesc"></p>
+    </div>
+
+    <div class="detail-tabs" id="detailTabs"></div>
+
+    <div id="tabGame" class="tab-content">
+      <div class="game-container" id="gameContainer">
+        <div class="start-hint" id="startHint">
+          <span>▶</span>
+          <p>点击开始游戏</p>
+        </div>
+        <iframe id="gameIframe" allow="autoplay; fullscreen" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div id="tabVideo" class="tab-content">
+      <div class="video-container">
+        <video id="videoPlayer" controls preload="metadata">
+          您的浏览器不支持视频播放。
+        </video>
+      </div>
+    </div>
+
+    <div id="tabModeling" class="tab-content">
+    </div>
+
+    <div id="tab3D" class="tab-content">
+      <div id="viewerContainer" style="width:100%;height:70vh;min-height:400px;border-radius:12px;overflow:hidden;"></div>
+    </div>
+      <div class="modeling-gallery" id="modelingGallery"></div>
+    </div>
+
+    <div id="tabInfo" class="tab-content">
+      <p id="infoContent" style="color: var(--text-secondary); line-height: 1.8;"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2026 作品集. All rights reserved.</p>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/detail.js"></script>
+</body>
+</html>

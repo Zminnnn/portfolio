@@ -1,0 +1,162 @@
+{
+  "categories": [
+    {
+      "id": "games",
+      "name": "游戏",
+      "icon": "🎮",
+      "works": [
+        {
+          "id": "基于unity的高互动性美术馆全景漫游系统-mqdx8j2p",
+          "title": "基于Unity的高互动性美术馆全景漫游系统",
+          "description": "本作品是基于 Unity 开发的高互动性美术馆全景漫游系统。系统支持用户账号注册与登录，可通过第一人称视角在虚拟展馆内自由行走、转动视角，搭配小地图实现快速定位与路线导航。点击展品即可查看文字介绍、播放语音讲解，还能对展品模型进行放大、旋转、缩放，近距离欣赏细节。同时系统集成展品收藏、在线留言墙等互动功能，增强观展趣味性。管理员可直接在场景内完成展品上架、下架与替换操作，结合 MySQL 数据库实现展馆内容动态管理，打造出沉浸式、可交互、易维护的数字化虚拟美术馆。",
+          "tags": [
+            "全景漫游",
+            "美术馆"
+          ],
+          "type": "game",
+          "date": "2026-06",
+          "orientation": "landscape",
+          "thumbnail": "assets/thumbnails/237e78f4.png",
+          "videoPath": "assets/videos/2489185a.mp4"
+        },
+        {
+          "id": "植物大战僵尸-mqdl7i59",
+          "title": "植物大战僵尸",
+          "description": "",
+          "tags": [
+            "unity2d"
+          ],
+          "type": "game",
+          "date": "2026-06",
+          "orientation": "landscape",
+          "webBuildPath": "assets/games/aa839e2a/植物大战僵尸/index.html",
+          "thumbnail": "assets/thumbnails/2e71d69a.png",
+          "videoPath": "assets/videos/2e71d69a.mp4"
+        },
+        {
+          "id": "古迹探险-mqdyopkh",
+          "title": "古迹探险",
+          "description": "",
+          "tags": [
+            "Unity3D"
+          ],
+          "type": "game",
+          "date": "2026-06",
+          "orientation": "landscape",
+          "thumbnail": "assets/thumbnails/c3c58b14.png",
+          "videoPath": "assets/videos/c3c58b14.mp4"
+        },
+        {
+          "id": "约翰的密室逃脱-mqdvpm8e",
+          "title": "约翰的密室逃脱",
+          "description": "",
+          "tags": [
+            "Unity3D"
+          ],
+          "type": "game",
+          "date": "2026-06",
+          "orientation": "landscape",
+          "thumbnail": "assets/thumbnails/b83512b4.png",
+          "videoPath": "assets/videos/b83512b4.mp4"
+        },
+        {
+          "id": "贪吃蛇-mqdmqewz",
+          "title": "贪吃蛇",
+          "description": "操作：WASD 控制方向；空格 加速",
+          "tags": [
+            "unity2d",
+            "UGUI"
+          ],
+          "type": "game",
+          "date": "2026-06",
+          "orientation": "landscape",
+          "videoPath": "assets/videos/4c1a66c1.mp4",
+          "thumbnail": "assets/thumbnails/3bf9fec0.png",
+          "webBuildPath": "assets/games/df3bfa0e/贪吃蛇/index.html"
+        },
+        {
+          "id": "superman-mqdrtyog",
+          "title": "SuperMan",
+          "description": "操作：WASD控制移动；空格跳跃\n介绍：两个关卡，躲避陷阱，收集樱桃",
+          "tags": [
+            "像素风；Unity2D"
+          ],
+          "type": "game",
+          "date": "2026-06",
+          "orientation": "landscape",
+          "thumbnail": "assets/thumbnails/78953d0d.png",
+          "webBuildPath": "assets/games/78953d0d/SuperMan/index.html",
+          "videoPath": "assets/videos/78953d0d.mp4"
+        },
+        {
+          "id": "大鱼吃小鱼-mqdtmjo7",
+          "title": "大鱼吃小鱼",
+          "description": "",
+          "tags": [
+            "Unity2d"
+          ],
+          "type": "game",
+          "date": "2026-06",
+          "orientation": "landscape",
+          "webBuildPath": "assets/games/18569dc3/大鱼吃小鱼/index.html",
+          "thumbnail": "assets/thumbnails/5bcb214b.png",
+          "videoPath": "assets/videos/5bcb214b.mp4"
+        }
+      ]
+    },
+    {
+      "id": "modeling",
+      "name": "建模",
+      "icon": "🏗️",
+      "works": [
+        {
+          "id": "枪-mqe1exgj",
+          "title": "枪",
+          "description": "",
+          "tags": [
+            "3dsMax"
+          ],
+          "type": "modeling",
+          "date": "2026-06",
+          "thumbnail": "assets/thumbnails/aa5d0b5c.png",
+          "fbxPath": "assets/models/aa5d0b5c/aa5d0b5c.fbx"
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "name": "更多",
+      "icon": "📁",
+      "works": [
+        {
+          "id": "图书管理系统-mqdzjrd8",
+          "title": "图书管理系统",
+          "description": "通过C#可视化连接SQL sever搭建了图书管理系统，面向普通用户和图书管理员，实现了图书的借阅，查询，以及管理员对图书的管理以及借阅的管理等功能。",
+          "tags": [
+            "C#可视化",
+            "数据库"
+          ],
+          "type": "other",
+          "date": "2026-06",
+          "thumbnail": "assets/thumbnails/eeb17d43.png",
+          "videoPath": "assets/videos/eeb17d43.mp4"
+        },
+        {
+          "id": "网页设计-mqdzp4oa",
+          "title": "网页设计",
+          "description": "",
+          "tags": [
+            "十个勤天",
+            "HTML",
+            "CSS",
+            "JS"
+          ],
+          "type": "other",
+          "date": "2026-06",
+          "thumbnail": "assets/thumbnails/b5dfd7bf.png",
+          "videoPath": "assets/videos/b5dfd7bf.mp4"
+        }
+      ]
+    }
+  ]
+}

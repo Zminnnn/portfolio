@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>后台管理</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-brand">🎮 作品集</a>
+      <ul class="navbar-links" id="navLinks"></ul>
+    </div>
+  </nav>
+
+  <div class="admin-layout">
+    <h1>📋 后台管理</h1>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Add / Edit Form -->
+    <div class="admin-section" id="formSection">
+      <h2 id="formTitle">添加新作品</h2>
+      <input type="hidden" id="editId">
+      <input type="hidden" id="editCategoryId">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="category">分类</label>
+          <select id="category">
+            <option value="games">🎮 游戏</option>
+            <option value="modeling">🏗️ 建模</option>
+            <option value="more">📁 更多</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="title">作品名称</label>
+          <input type="text" id="title" placeholder="输入作品名称" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">作品描述</label>
+        <textarea id="description" placeholder="输入作品描述……"></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="tags">标签（逗号分隔）</label>
+          <input type="text" id="tags" placeholder="如: 动作, 像素风, Unity">
+        </div>
+        <div class="form-group" id="orientationGroup">
+          <label for="orientation">游戏方向</label>
+          <select id="orientation">
+            <option value="landscape">横屏</option>
+            <option value="portrait">竖屏</option>
+          </select>
+        </div>
+            <div class="form-group" id="contentGroup" style="display:none;">
+        <label for="content">详细内容（支持换行）</label>
+        <textarea id="content" placeholder="输入详细内容……"></textarea>
+      </div>
+</div>
+
+      <div class="form-group">
+        <label>缩略图（封面图）</label>
+        <div class="file-upload-area" id="thumbArea" onclick="document.getElementById('thumbFile').click()">
+          <input type="file" id="thumbFile" accept="image/*">
+          <p id="thumbLabel">点击上传缩略图（jpg/png）</p>
+        </div>
+      </div>
+
+      <div class="form-group" id="webBuildGroup">
+        <label>Web 包（ZIP 格式）</label>
+        <div class="file-upload-area" id="zipArea" onclick="document.getElementById('zipFile').click()">
+          <input type="file" id="zipFile" accept=".zip">
+          <p id="zipLabel">点击上传 Web 包 ZIP</p>
+        </div>
+      </div>
+
+      <div class="form-group" id="videoGroup">
+        <label>演示视频（MP4）</label>
+        <div class="file-upload-area" id="videoArea" onclick="document.getElementById('videoFile').click()">
+          <input type="file" id="videoFile" accept="video/mp4">
+          <p id="videoLabel">点击上传演示视频 MP4</p>
+        </div>
+      </div>
+
+      <div class="form-group" id="modelingImagesGroup" style="display:none;">
+      <div class="form-group" id="fbxGroup" style="display:none;">
+        <label>3D 模型（FBX 格式）</label>
+        <div class="file-upload-area" id="fbxArea" onclick="document.getElementById('fbxFile').click()">
+          <input type="file" id="fbxFile" accept=".fbx">
+          <p id="fbxLabel">点击上传 FBX 文件（含贴图可直接嵌入）</p>
+        </div>
+      </div>
+        <label>建模展示图（可多选）</label>
+        <div class="file-upload-area" id="modelingArea" onclick="document.getElementById('modelingFiles').click()">
+          <input type="file" id="modelingFiles" accept="image/*" multiple>
+          <p id="modelingLabel">点击上传展示图片（可选多张）</p>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" onclick="saveWork()">💾 保存作品</button>
+        <button class="btn btn-secondary" onclick="resetForm()">取消</button>
+      </div>
+    </div>
+
+    <!-- Works List -->
+    <div class="admin-section">
+      <h2>已发布作品</h2>
+      <div id="workListContainer">
+        <div class="work-list" id="workList"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
+
+
