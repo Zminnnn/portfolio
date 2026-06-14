@@ -72,11 +72,10 @@ app.use((req, res, next) => {
   next();
 });
 
- // Serve static files
-// Serve root index.html explicitly (moved from public/ to root for GitHub Pages)
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
+// Serve static files
+// Serve static files from root (css/, js/, index.html, detail.html, data/, assets/)
+app.use(express.static(__dirname));
+// Serve public/ for admin.html (local-only admin page)
 app.use(express.static(PUBLIC_DIR));
 app.use('/data', express.static(DATA_DIR));
 app.use('/assets', express.static(ASSETS_DIR));
