@@ -35,13 +35,16 @@ function renderNavbar(data) {
     container.appendChild(li);
   });
 
-  // Admin link
+ // Admin link
+  // Only show admin link when running locally (hidden on GitHub Pages for visitors)
+  if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
   const adminLi = document.createElement('li');
   const adminA = document.createElement('a');
   adminA.href = '/admin';
   adminA.textContent = '⚙️ 管理';
   adminLi.appendChild(adminA);
   container.appendChild(adminLi);
+  }
 }
 
 function getCategory(data, categoryId) {
