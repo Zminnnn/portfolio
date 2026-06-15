@@ -3,7 +3,7 @@ let worksData = null;
 
 async function loadWorks() {
   try {
-    const res = await fetch('/data/works.json?_t=' + Date.now());
+    const res = await fetch('data/works.json?_t=' + Date.now());
     worksData = await res.json();
     return worksData;
   } catch (e) {
@@ -18,9 +18,11 @@ function renderNavbar(data) {
   container.innerHTML = '';
   const allItem = document.createElement('li');
   const allLink = document.createElement('a');
-  allLink.href = '/';
+  allLink.href = '.';
   allLink.textContent = '🏠 首页';
-  if (location.pathname === '/' || location.pathname.endsWith('index.html')) {
+  // Detect if current page is the home page (works on both local and GitHub Pages subpath)
+  const currentFile = location.pathname.split('/').pop() || 'index.html';
+  if (currentFile === '' || currentFile === 'index.html') {
     allLink.className = 'active';
   }
   allItem.appendChild(allLink);
@@ -29,7 +31,7 @@ function renderNavbar(data) {
   data.categories.forEach(cat => {
     const li = document.createElement('li');
     const a = document.createElement('a');
-    a.href = '/?category=' + cat.id;
+    a.href = 'index.html?category=' + cat.id;
     a.innerHTML = cat.icon + ' ' + cat.name + ' <span class="nav-count">' + cat.works.length + '</span>';
     li.appendChild(a);
     container.appendChild(li);

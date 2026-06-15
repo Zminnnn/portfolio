@@ -99,7 +99,7 @@ function renderWorks(data) {
     if (work.type === 'game' && work.webBuildPath) {
       const playBtn = document.createElement('a');
       playBtn.className = 'btn btn-primary';
-      playBtn.href = '/detail.html?work=' + work.id + '&mode=play';
+      playBtn.href = 'detail.html?work=' + work.id + '&mode=play';
       playBtn.textContent = '▶ 玩';
       actions.appendChild(playBtn);
     }
@@ -107,7 +107,7 @@ function renderWorks(data) {
     if (work.videoPath) {
       const videoBtn = document.createElement('a');
       videoBtn.className = 'btn';
-      videoBtn.href = '/detail.html?work=' + work.id + '&mode=video';
+      videoBtn.href = 'detail.html?work=' + work.id + '&mode=video';
       videoBtn.textContent = '▶ 视频';
       actions.appendChild(videoBtn);
     }
@@ -115,7 +115,7 @@ function renderWorks(data) {
     if (work.type === 'modeling') {
       const viewBtn = document.createElement('a');
       viewBtn.className = 'btn btn-primary';
-      viewBtn.href = '/detail.html?work=' + work.id + '&mode=modeling';
+      viewBtn.href = 'detail.html?work=' + work.id + '&mode=modeling';
       viewBtn.textContent = '👁 查看';
       actions.appendChild(viewBtn);
     }
@@ -124,7 +124,7 @@ function renderWorks(data) {
     if (actions.children.length === 0) {
       const infoBtn = document.createElement('a');
       infoBtn.className = 'btn btn-primary';
-      infoBtn.href = '/detail.html?work=' + work.id + '&mode=info';
+      infoBtn.href = 'detail.html?work=' + work.id + '&mode=info';
       infoBtn.textContent = '详情';
       actions.appendChild(infoBtn);
     }
